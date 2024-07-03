@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormDataToTable</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+      }
+      th {
+        padding: 16px;
+        font-size: large;
+      }
+      div {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .gender {
+        display: flex;
+        gap: 4px;
+      }
+      .city {
+        margin-left: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple form</h1>
+    <form id="form">
+      <div class="">
+        <div class="name">
+          <p>Name:</p>
+          <input type="text" placeholder="name" id="name" />
+        </div>
+        <div class="email">
+          <p>Email:</p>
+          <input type="email" placeholder="email" id="email" />
+        </div>
+      </div>
+      <div class="">
+        <div class="gender">
+          <p>Gender:</p>
+          <input type="radio" id="male" name="gender" value="Male" checked />
+          <label for="Male">Male</label><br />
+          <input type="radio" id="female" name="gender" value="Female" />
+          <label for="female">Female</label><br />
+        </div>
+        <div class="city">
+          <label for="city">City</label>
+          <select name="city" id="city">
+            <option value="Silvassa">Silvassa</option>
+            <option value="Vapi">Daman</option>
+            <option value="Daman">Daman</option>
+            <option value="Diu">Diu</option>
+          </select>
+        </div>
+      </div>
+
+      <br /><br />
+
+      <label for="address">Address</label>
+      <textarea
+        name="address"
+        id="address"
+        placeholder="full address"
+        rows="4"
+        cols="30"
+      ></textarea>
+      <br /><br />
+      <button type="submit" id="submit" value="Submit">Submit</button>
+      <br /><br />
+    </form>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>City</th>
+        <th>Address</th>
+      </tr>
+    </table>
+
+    <script src="index.js"></script>
+  </body>
+</html>
